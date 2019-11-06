@@ -1,0 +1,11 @@
+### IntelliJ IDEA ###
+target
+.idea
+*.iws
+*.iml
+*.ipr
+/task1/.idea
+/task1/*.iws
+/task1/*.iml
+/task1/*.ipr
+/task1/target
