@@ -4,8 +4,15 @@ target
 *.iws
 *.iml
 *.ipr
+
 /task1/.idea
 /task1/*.iws
 /task1/*.iml
 /task1/*.ipr
 /task1/target
+
+/task2.1/.idea
+/task2.1/*.iws
+/task2.1/*.iml
+/task2.1/*.ipr
+/task2.1/target
