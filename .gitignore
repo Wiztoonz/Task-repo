@@ -34,3 +34,9 @@ target
 /task3/*.iml
 /task3/*.ipr
 /task3/target
+
+/task4/.idea
+/task4/*.iws
+/task4/*.iml
+/task4/*.ipr
+/task4/target
