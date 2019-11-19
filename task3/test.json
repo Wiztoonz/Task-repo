@@ -1,0 +1,38 @@
+[
+  {
+    "name": "Sylvanas",
+    "time": 168.0,
+    "status": "PROGRAMMER",
+    "monthSalary": 1000.0
+  },
+  {
+    "name": "Alleria",
+    "time": 160.0,
+    "status": "PROGRAMMER",
+    "monthSalary": 952.3809523809524
+  },
+  {
+    "name": "Vereesa",
+    "time": 181.0,
+    "status": "PROGRAMMER",
+    "monthSalary": 538.6904761904763
+  },
+  {
+    "name": "Dath'Remar",
+    "time": 168.0,
+    "status": "MANAGER",
+    "monthSalary": 800.0
+  },
+  {
+    "name": "Dar'Khan",
+    "time": 160.0,
+    "status": "MANAGER",
+    "monthSalary": 1142.857142857143
+  },
+  {
+    "name": "Lirath",
+    "time": 174.0,
+    "status": "MANAGER",
+    "monthSalary": 1000.0
+  }
+]

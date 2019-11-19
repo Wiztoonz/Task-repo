@@ -28,3 +28,9 @@ target
 /task2.3*/*.iml
 /task2.3*/*.ipr
 /task2.3*/target
+
+/task3/.idea
+/task3/*.iws
+/task3/*.iml
+/task3/*.ipr
+/task3/target
