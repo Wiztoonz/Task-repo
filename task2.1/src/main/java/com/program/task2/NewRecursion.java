@@ -25,7 +25,7 @@ public class NewRecursion {
     }
 
     private boolean isVowel(char symbol, char[] vowels, int indexVowels) {
-        if (vowels[indexVowels] == symbol) return true;
+        if (vowels[indexVowels] == symbol) { return true; }
         indexVowels++;
         return (vowels.length > indexVowels) && isVowel(symbol, vowels, indexVowels);
     }

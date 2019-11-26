@@ -13,7 +13,17 @@ public class Main {
         // Переделанная реализация
         System.out.println("Переделанная реализация");
         NewRecursion newRecursion = new NewRecursion();
-        String result = newRecursion.changeString("hello healo abc @!_=- oab");
+        String result = newRecursion.changeString("hello");
         System.out.println(result);
+
+        System.out.println();
+
+        // SimpleRecursion
+        System.out.println("SimpleRecursion.class");
+        SimpleRecursion simpleRecursion = new SimpleRecursion();
+        String showFirst = simpleRecursion.interviewRecursion("hello");
+        String showSecond = simpleRecursion.interviewRecursion("healo");
+        System.out.println(showFirst);
+        System.out.println(showSecond);
     }
 }
