@@ -11,6 +11,12 @@ target
 /task1/*.ipr
 /task1/target
 
+/new-task1/.idea
+/new-task1/*.iws
+/new-task1/*.iml
+/new-task1/*.ipr
+/new-task1/target
+
 /task2.1/.idea
 /task2.1/*.iws
 /task2.1/*.iml
