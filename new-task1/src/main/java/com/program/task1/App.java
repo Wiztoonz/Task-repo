@@ -41,8 +41,9 @@ public class App {
         System.out.println("----");
 
         // Отработал меньше
-        EmployeeImpl p2 = new Programmer(8, 168, 21, 160);
+        EmployeeImpl p2 = new Programmer(8, 168, 21);
         p2.setRate(1000);
+        p2.setHour(160);
         System.out.println("Work percent " + (int) p2.getTimePercent() + "%");
         System.out.println("Salary: " + (int) p2.monthSalary());
 

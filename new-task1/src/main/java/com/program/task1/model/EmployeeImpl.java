@@ -18,6 +18,12 @@ public abstract class EmployeeImpl extends SalaryCalc implements Employee {
         this.time = workTime;
     }
 
+    public EmployeeImpl(int weekTime, double monthTime, int workDay) {
+        this.weekTime = weekTime;
+        this.monthTime = monthTime;
+        this.workDay = workDay;
+    }
+
     public void setHour(double time) {
         this.time = time;
     }

@@ -8,6 +8,10 @@ public class Programmer extends EmployeeImpl {
         super(weekTime, monthTime, workDay, workTime);
     }
 
+    public Programmer(int weekTime, double monthTime, int workDay) {
+        super(weekTime, monthTime, workDay);
+    }
+
     @Override
     public double monthSalary() {
         double rate = getRate(), time = getTime();
