@@ -5,17 +5,30 @@ target
 *.iml
 *.ipr
 
-/task1/.idea
-/task1/*.iws
-/task1/*.iml
-/task1/*.ipr
-/task1/target
+/all-task1/.idea
+/all-task1/*.iws
+/all-task1/*.iml
+/all-task1/*.ipr
+/all-task1/target
 
-/new-task1/.idea
-/new-task1/*.iws
-/new-task1/*.iml
-/new-task1/*.ipr
-/new-task1/target
+/all-task1/first-task1/.idea
+/all-task1/first-task1/*.iws
+/all-task1/first-task1/*.iml
+/all-task1/first-task1/*.ipr
+/all-task1/first-task1/target
+
+/all-task1/second-task1/.idea
+/all-task1/second-task1/*.iws
+/all-task1/second-task1/*.iml
+/all-task1/second-task1/*.ipr
+/all-task1/second-task1/target
+
+/all-task1/third-task1/.idea
+/all-task1/third-task1/*.iws
+/all-task1/third-task1/*.iml
+/all-task1/third-task1/*.ipr
+/all-task1/third-task1/target
+
 
 /task2.1/.idea
 /task2.1/*.iws
