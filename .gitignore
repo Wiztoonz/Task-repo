@@ -29,6 +29,11 @@ target
 /all-task1/third-task1/*.ipr
 /all-task1/third-task1/target
 
+/all-task1/fourth-task1/.idea
+/all-task1/fourth-task1/*.iws
+/all-task1/fourth-task1/*.iml
+/all-task1/fourth-task1/*.ipr
+/all-task1/fourth-task1/target
 
 /task2.1/.idea
 /task2.1/*.iws
