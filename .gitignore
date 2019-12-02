@@ -35,23 +35,23 @@ target
 /all-task1/fourth-task1/*.ipr
 /all-task1/fourth-task1/target
 
-/task2.1/.idea
-/task2.1/*.iws
-/task2.1/*.iml
-/task2.1/*.ipr
-/task2.1/target
+/all-task2/task2.1/.idea
+/all-task2/task2.1/*.iws
+/all-task2/task2.1/*.iml
+/all-task2/task2.1/*.ipr
+/all-task2/task2.1/target
 
-/task2.3/.idea
-/task2.3/*.iws
-/task2.3/*.iml
-/task2.3/*.ipr
-/task2.3/target
+/all-task2/task2.3/.idea
+/all-task2/task2.3/*.iws
+/all-task2/task2.3/*.iml
+/all-task2/task2.3/*.ipr
+/all-task2/task2.3/target
 
-/task2.3*/.idea
-/task2.3*/*.iws
-/task2.3*/*.iml
-/task2.3*/*.ipr
-/task2.3*/target
+/all-task2/task2.3*/.idea
+/all-task2/task2.3*/*.iws
+/all-task2/task2.3*/*.iml
+/all-task2/task2.3*/*.ipr
+/all-task2/task2.3*/target
 
 /task3/.idea
 /task3/*.iws

@@ -1,5 +1,6 @@
-package com.program.task2;
+package com.program.task2.old;
 
+import com.program.task2.old.SimpleRecursion;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;

@@ -1,4 +1,4 @@
-package com.program.task2;
+package com.program.task2.old;
 
 import org.junit.runner.RunWith;
 import org.junit.runners.Suite;

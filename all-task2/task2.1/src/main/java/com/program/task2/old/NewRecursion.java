@@ -1,4 +1,4 @@
-package com.program.task2;
+package com.program.task2.old;
 
 public class NewRecursion {
     public String changeString(String str) {
