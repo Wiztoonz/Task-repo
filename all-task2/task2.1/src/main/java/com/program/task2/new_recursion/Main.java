@@ -12,12 +12,13 @@ public class Main {
 //        System.out.println(recursion2);
 
 
-        RecursionStr rec = new RecursionStr();
+        RecursionStr_v2 rec = new RecursionStr_v2();
+        System.out.println(rec.interviewRecursion("a"));
         System.out.println(rec.interviewRecursion("abc"));
         System.out.println(rec.interviewRecursion("hello"));
         System.out.println(rec.interviewRecursion("abc"));
         System.out.println(rec.interviewRecursion("healo"));
-
+//
     }
 
 }

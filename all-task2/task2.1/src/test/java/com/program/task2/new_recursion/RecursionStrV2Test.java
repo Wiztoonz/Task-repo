@@ -4,13 +4,13 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
-public class RecursionStrTest {
+public class RecursionStrV2Test {
 
-    private RecursionStr recursion;
+    private RecursionStr_v2 recursion;
 
     @Before
     public void init() {
-        recursion = new RecursionStr();
+        recursion = new RecursionStr_v2();
     }
 
     @Test
