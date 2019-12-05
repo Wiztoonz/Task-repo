@@ -11,6 +11,7 @@ public class Recursion {
 
     private void build(StringBuilder builder, String str, int index) {
         char currentSymbol = str.charAt(index);
+        System.out.println(currentSymbol);
         index++;
         if (isVowel(currentSymbol)) {
             if (index > 1) {
