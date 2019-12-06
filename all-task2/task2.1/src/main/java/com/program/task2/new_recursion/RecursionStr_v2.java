@@ -19,10 +19,7 @@ public class RecursionStr_v2 {
             boolean isCurrentSymbol = vowels.contains(currentSymbol);
             boolean isSymbolAfter = vowels.contains(symbolAfter);
             boolean isAddBefore = !isCurrentSymbol && isSymbolAfter;
-            if (isAddBefore) {
-                return currentSymbol + "*" + build(text.substring(1));
-            }
-            return currentSymbol + (isCurrentSymbol ? "*" : "") + build(text.substring(1));
+            return currentSymbol + (isAddBefore || isCurrentSymbol ? "*" : "") + build(text.substring(1));
         }
         return text;
     }
