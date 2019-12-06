@@ -16,13 +16,14 @@ public class RecursionStr_v2 {
         if (text.length() > 1) {
             char currentSymbol = text.charAt(0);
             char symbolAfter = text.charAt(1);
+            String symbolWithStar = currentSymbol + "*" + build(text.substring(1));
             boolean isCurrentSymbol = vowels.contains(currentSymbol);
             boolean isSymbolAfter = vowels.contains(symbolAfter);
-            if (!isCurrentSymbol && isSymbolAfter) {
-                return currentSymbol + "*" + build(text.substring(1));
+            boolean isAddBefore = !isCurrentSymbol && isSymbolAfter;
+            if (isAddBefore) {
+                return symbolWithStar;
             }
-            return (isCurrentSymbol) ? currentSymbol + "*" + build(text.substring(1))
-                    : currentSymbol + build(text.substring(1));
+            return (isCurrentSymbol) ? symbolWithStar : currentSymbol + build(text.substring(1));
         }
         return text;
     }
