@@ -53,6 +53,12 @@ target
 /all-task2/task2.3/*.ipr
 /all-task2/task2.3/target
 
+/all-task2/task2.3_new/.idea
+/all-task2/task2.3_new/*.iws
+/all-task2/task2.3_new/*.iml
+/all-task2/task2.3_new/*.ipr
+/all-task2/task2.3_new/target
+
 /all-task2/task2.3*/.idea
 /all-task2/task2.3*/*.iws
 /all-task2/task2.3*/*.iml
