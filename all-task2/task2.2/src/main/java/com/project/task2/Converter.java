@@ -12,11 +12,10 @@ public class Converter {
 
         String bits = Integer.toBinaryString(symbol);
         List<String> groupBits = getGroupBits(bits);
-
         for (String bit : groupBits) {
-            builder.append((bit.charAt(0) == '1') ? "0 " + bit : " 00 " + bit + " ");
+            builder.append((bit.charAt(0) == '1') ? "0 " + leftPadZeros(bit.length()) : " 00 " + bit + " ");
         }
-        return new String(builder).trim().replaceAll("1", "0");
+        return new String(builder).trim();
     }
 
     private List<String> getGroupBits(String bits) {
@@ -26,6 +25,14 @@ public class Converter {
             bitsLine.add(matcher.group());
         }
         return bitsLine;
+    }
+
+    private String leftPadZeros(int length) {
+        StringBuilder builder = new StringBuilder();
+        for (int i = 0; i < length; i++) {
+            builder.append("0");
+        }
+        return new String(builder);
     }
 
 }
