@@ -4,7 +4,7 @@ import com.program.task1.model.Accountant;
 import com.program.task1.model.Employee;
 import com.program.task1.model.Manager;
 import com.program.task1.model.Programmer;
-import com.program.task1.task2_3.Merge;
+import com.program.task1.EmployeeUtil.Merge;
 
 import java.util.ArrayList;
 import java.util.List;
