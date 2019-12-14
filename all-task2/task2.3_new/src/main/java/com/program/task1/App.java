@@ -1,10 +1,10 @@
 package com.program.task1;
 
+import com.program.task1.EmployeeUtil.Merge;
 import com.program.task1.model.Accountant;
 import com.program.task1.model.Employee;
 import com.program.task1.model.Manager;
 import com.program.task1.model.Programmer;
-import com.program.task1.EmployeeUtil.Merge;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -77,6 +77,8 @@ public class App {
         System.out.println("After merge");
         List<Employee> merge = Merge.merge(firstEmployeeList, secondEmployeeList);
         System.out.println(merge);
+        System.out.println(firstEmployeeList);
+        System.out.println(secondEmployeeList);
     }
 
 }
