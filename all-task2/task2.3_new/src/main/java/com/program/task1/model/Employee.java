@@ -2,7 +2,7 @@ package com.program.task1.model;
 
 import java.util.Objects;
 
-public abstract class Employee {
+public abstract class Employee implements Comparable<Employee> {
 
     protected final int PERCENT = 100;
 
@@ -48,6 +48,12 @@ public abstract class Employee {
         return Double.compare(employee.monthTime, monthTime) == 0 &&
                 Double.compare(employee.hourRate, hourRate) == 0 &&
                 Double.compare(employee.workTime, workTime) == 0;
+    }
+
+    @Override
+    public int compareTo(Employee o) {
+        return (this.workTime > o.workTime || this.hourRate > o.hourRate || this.monthTime > o.monthTime) ? +1 :
+                (this.workTime < o.workTime || this.hourRate < o.hourRate || this.monthTime < o.monthTime) ? -1 : 0;
     }
 
     @Override
