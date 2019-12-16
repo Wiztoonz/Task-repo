@@ -59,11 +59,11 @@ target
 /all-task2/task2.3_new/*.ipr
 /all-task2/task2.3_new/target
 
-/all-task2/task2.3*/.idea
-/all-task2/task2.3*/*.iws
-/all-task2/task2.3*/*.iml
-/all-task2/task2.3*/*.ipr
-/all-task2/task2.3*/target
+/all-task2/task2.3_star/.idea
+/all-task2/task2.3_star/*.iws
+/all-task2/task2.3_star/*.iml
+/all-task2/task2.3_star/*.ipr
+/all-task2/task2.3_star/target
 
 /task3/.idea
 /task3/*.iws

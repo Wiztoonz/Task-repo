@@ -1,4 +1,4 @@
-package com.program.task1.EmployeeUtil;
+package com.program.task1.employeeUtil;
 
 import com.program.task1.model.Employee;
 

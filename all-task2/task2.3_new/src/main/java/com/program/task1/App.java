@@ -1,6 +1,6 @@
 package com.program.task1;
 
-import com.program.task1.EmployeeUtil.Merge;
+import com.program.task1.employeeUtil.Merge;
 import com.program.task1.model.Accountant;
 import com.program.task1.model.Employee;
 import com.program.task1.model.Manager;

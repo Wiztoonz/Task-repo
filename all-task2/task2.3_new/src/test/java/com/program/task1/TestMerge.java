@@ -3,7 +3,7 @@ package com.program.task1;
 import com.program.task1.model.Employee;
 import com.program.task1.model.Manager;
 import com.program.task1.model.Programmer;
-import com.program.task1.EmployeeUtil.Merge;
+import com.program.task1.employeeUtil.Merge;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
