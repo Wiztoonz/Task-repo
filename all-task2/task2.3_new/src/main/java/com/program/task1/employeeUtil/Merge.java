@@ -7,25 +7,27 @@ import java.util.*;
 public class Merge {
 
     public static List<Employee> merge(List<Employee> firstList, List<Employee> secondList) {
-        secondList.removeAll(firstList);
-        secondList.addAll(firstList);
+        List<Employee> copyFirstList = new ArrayList<>(firstList); // \___ из [A] удалить только те, которых нет в [B]
+        copyFirstList.retainAll(secondList);                       // /    (делаю в копии чтоб не изменять [A])
 
-        List<Employee> secondListCopy = new ArrayList<>(secondList);
+        Set<Employee> set = new HashSet<>(secondList); //   \___ копия [A] в [B] и редактирование
+        set.addAll(copyFirstList);                     //   /
 
-        secondList.removeAll(firstList);
-        firstList.addAll(secondList);
+        secondList.clear();                            // \___ перенос в [B] и получение индексации (не затрагивает [A])
+        secondList.addAll(set);                        // /
 
-        List<Employee> firstListCopy = new ArrayList<>(firstList);
-
-        firstList.clear();
-        secondList.clear();
-
-        Collections.sort(secondListCopy);
-        Collections.sort(firstListCopy);
-
-        firstList.addAll(secondListCopy);
-        secondList.addAll(firstListCopy);
-        return firstList;
+        Iterator<Employee> iterator = secondList.iterator();
+        int indexElement = 0;
+        while (iterator.hasNext()) {
+            Employee employee = iterator.next();
+            if (indexElement < firstList.size()) {       // \___ Переливаем данные из [B] в [A]
+                firstList.set(indexElement, employee);   // /
+            } else {                        // \___ Когда данные перелиты и в [B] остались данные, тогда просто дополнить [A].
+                firstList.add(employee);    // /
+            }
+            indexElement++;
+        }
+        return firstList; // На данные момент [A] == [B]
     }
 
 }

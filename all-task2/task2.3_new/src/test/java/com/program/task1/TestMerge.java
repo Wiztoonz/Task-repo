@@ -60,7 +60,6 @@ public class TestMerge {
         needList.add(p1);
         needList.add(p2);
         needList.add(m2);
-        Collections.sort(needList);
 
         boolean result = needList.containsAll(merge);
 

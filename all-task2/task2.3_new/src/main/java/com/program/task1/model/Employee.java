@@ -2,10 +2,11 @@ package com.program.task1.model;
 
 import java.util.Objects;
 
-public abstract class Employee implements Comparable<Employee> {
+public abstract class Employee {
 
     protected final int PERCENT = 100;
 
+    private int id;
     private double monthTime;
     private double hourRate;
     private double workTime;
@@ -14,6 +15,18 @@ public abstract class Employee implements Comparable<Employee> {
 
     public long timePercent() {
         return Math.round(workTime / monthTime * PERCENT);
+    }
+
+    public int getPERCENT() {
+        return PERCENT;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public double getMonthTime() {
@@ -45,26 +58,19 @@ public abstract class Employee implements Comparable<Employee> {
         if (this == o) return true;
         if (!(o instanceof Employee)) return false;
         Employee employee = (Employee) o;
-        return Double.compare(employee.monthTime, monthTime) == 0 &&
-                Double.compare(employee.hourRate, hourRate) == 0 &&
-                Double.compare(employee.workTime, workTime) == 0;
-    }
-
-    @Override
-    public int compareTo(Employee o) {
-        return (this.workTime > o.workTime || this.hourRate > o.hourRate || this.monthTime > o.monthTime) ? +1 :
-                (this.workTime < o.workTime || this.hourRate < o.hourRate || this.monthTime < o.monthTime) ? -1 : 0;
+        return id == employee.id;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(monthTime, hourRate, workTime);
+        return Objects.hash(id);
     }
 
     @Override
     public String toString() {
         return "Employee{" +
-                "monthTime=" + monthTime +
+                "id=" + id +
+                ", monthTime=" + monthTime +
                 ", hourRate=" + hourRate +
                 ", workTime=" + workTime +
                 '}';
