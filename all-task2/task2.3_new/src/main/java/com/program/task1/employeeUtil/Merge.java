@@ -2,32 +2,36 @@ package com.program.task1.employeeUtil;
 
 import com.program.task1.model.Employee;
 
-import java.util.*;
+import java.util.LinkedHashSet;
+import java.util.List;
+import java.util.Set;
 
 public class Merge {
 
     public static List<Employee> merge(List<Employee> firstList, List<Employee> secondList) {
-        List<Employee> copyFirstList = new ArrayList<>(firstList); // \___ из [A] удалить только те, которых нет в [B]
-        copyFirstList.retainAll(secondList);                       // /    (делаю в копии чтоб не изменять [A])
+        firstList.retainAll(secondList);                       // из [A] удалить элементы которых нет в [B]
 
-        Set<Employee> set = new HashSet<>(secondList); //   \___ копия [A] в [B] и редактирование
-        set.addAll(copyFirstList);                     //   /
+        Set<Employee> set = new LinkedHashSet<>(secondList);   //   \___ копия [A] в [B] и редактирование
+        set.addAll(firstList);                                 //   /
 
-        secondList.clear();                            // \___ перенос в [B] и получение индексации (не затрагивает [A])
+        secondList.clear();                            // \___ перенос в [B] (не затрагивает [A])
         secondList.addAll(set);                        // /
 
-        Iterator<Employee> iterator = secondList.iterator();
-        int indexElement = 0;
-        while (iterator.hasNext()) {
-            Employee employee = iterator.next();
-            if (indexElement < firstList.size()) {       // \___ Переливаем данные из [B] в [A]
-                firstList.set(indexElement, employee);   // /
-            } else {                        // \___ Когда данные перелиты и в [B] остались данные, тогда просто дополнить [A].
-                firstList.add(employee);    // /
+        for (Employee employeeSL : secondList) {
+            int index = secondList.indexOf(employeeSL);
+            if (index < firstList.size()) {
+                for (Employee employeeFL : firstList) {
+                    if (!employeeSL.equals(employeeFL)) {      // \___ Переливаем данные из [B] в [A]
+                        firstList.set(index, employeeSL);      // /    (если это нужно)
+                    }
+                }
             }
-            indexElement++;
+            if (firstList.size() < secondList.size()) {
+                firstList.add(employeeSL); // Когда данные перелиты в [B] и остались данные, тогда просто дополнить [A].
+            }
         }
-        return firstList; // На данные момент [A] == [B]
+
+        return firstList; // На данный момент [A] == [B]
     }
 
 }

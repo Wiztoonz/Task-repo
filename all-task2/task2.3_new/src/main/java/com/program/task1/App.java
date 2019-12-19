@@ -86,14 +86,11 @@ public class App {
         List<Employee> firstEmployeeList = new ArrayList<>();
         firstEmployeeList.add(p1);
         firstEmployeeList.add(p2);
-        firstEmployeeList.add(p3);
 
         List<Employee> secondEmployeeList = new ArrayList<>();
         secondEmployeeList.add(m1);
         secondEmployeeList.add(m2);
-        secondEmployeeList.add(m3);
-        secondEmployeeList.add(m4);
-        secondEmployeeList.add(m5);
+
 
         System.out.println("After merge");
         List<Employee> merge = Merge.merge(firstEmployeeList, secondEmployeeList);
