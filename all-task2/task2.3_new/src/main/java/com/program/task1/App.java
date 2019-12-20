@@ -23,8 +23,8 @@ public class App {
         Employee p2 = new Programmer();
         p2.setId(2);
         p2.setHourRate(10);
-        p2.setWorkTime(168);
-        p2.setMonthTime(170);
+        p2.setWorkTime(173);
+        p2.setMonthTime(168);
         System.out.printf(p2 + " Время переработки программиста в процентах: %d%%. З/П: %d.\n", p2.timePercent(), p2.monthSalary());
 
         Employee p3 = new Programmer();
@@ -40,14 +40,14 @@ public class App {
         m1.setId(2);
         m1.setHourRate(10);
         m1.setWorkTime(168);
-        m1.setMonthTime(170);
+        m1.setMonthTime(168);
         System.out.printf(m1 + " Время полной работы менеджера в процентах: %d%%. З/П: %d.\n", m1.timePercent(), m1.monthSalary());
 
         Employee m2 = new Manager();
         m2.setId(3);
         m2.setHourRate(10);
         m2.setWorkTime(180);
-        m2.setMonthTime(180);
+        m2.setMonthTime(168);
         System.out.printf(m2 + " Время переработки менеджера в процентах: %d%%. З/П: %d.\n", m2.timePercent(), m2.monthSalary());
 
         Employee m3 = new Manager();

@@ -58,15 +58,12 @@ public abstract class Employee {
         if (this == o) return true;
         if (!(o instanceof Employee)) return false;
         Employee employee = (Employee) o;
-        return id == employee.id &&
-                Double.compare(employee.monthTime, monthTime) == 0 &&
-                Double.compare(employee.hourRate, hourRate) == 0 &&
-                Double.compare(employee.workTime, workTime) == 0;
+        return id == employee.id;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, monthTime, hourRate, workTime);
+        return Objects.hash(id);
     }
 
     @Override
