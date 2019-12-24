@@ -2,38 +2,55 @@ package com.program.task1.employeeUtil;
 
 import com.program.task1.model.Employee;
 
-import java.util.LinkedHashSet;
-import java.util.List;
-import java.util.ListIterator;
-import java.util.Set;
+import java.util.*;
 
 public class Merge {
 
     public static List<Employee> merge(List<Employee> firstList, List<Employee> secondList) {
-        firstList.retainAll(secondList);                       // из [A] удалить элементы которых нет в [B]
+        firstList.retainAll(secondList);
 
-        Set<Employee> set = new LinkedHashSet<>(secondList);   //   \___ копия [A] в [B] и редактирование
-        set.addAll(firstList);                                 //   /
+        secondList.addAll(firstList);
+        List<Employee> listFormation = listFormation(secondList);
 
-        secondList.clear();                            // \___ перенос в [B] (не затрагивает [A])
-        secondList.addAll(set);                        // /
+        secondList.clear();
+        secondList.addAll(listFormation);
 
         ListIterator<Employee> firstListIter = firstList.listIterator();
-        ListIterator<Employee> secondListIter = secondList.listIterator();
-
-        while (firstListIter.hasNext()) {
-            Employee employeeFL = firstListIter.next();
-            while (secondListIter.hasNext()) {
-                Employee employeeSL = secondListIter.next();
-                if (employeeFL.equals(employeeSL)) { // Если данные в [B] и [A] равны или неравны (так как в любом случае)
-                    firstListIter.set(employeeSL);   // данные должны быть обновлены ничего не теряем. (есть минус на выполнение    |
-                } else {                             // equals() сравнивает по id                      |лишней операции но только   |
-                    firstListIter.add(employeeSL);   // Переливаем из [B] в [A] недостающие элементы.  |в том случае если           |
-                }                                    //                                                |все поля полностью идентичны)
-            }                                        //                                                 equals не можете проверить все поля
+        for (Employee nextSL : secondList) {
+            while (firstListIter.hasNext()) {
+                Employee nextFL = firstListIter.next();
+                if (nextSL.equals(nextFL)) {
+                    firstListIter.set(nextSL);
+                } else {
+                    firstListIter.add(nextSL);
+                }
+            }
+            firstListIter = firstList.listIterator();
         }
 
         return firstList; // На данный момент [A] == [B]
+    }
+
+    private static List<Employee> listFormation(List<Employee> list) {
+        Map<Employee, Integer> duplicates = new HashMap<>();
+        for (Employee emp : list) {
+            if (duplicates.containsKey(emp)) {
+                duplicates.put(emp, duplicates.get(emp) + 1);
+            } else {
+                duplicates.put(emp, 1);
+            }
+        }
+
+        for (Map.Entry<Employee, Integer> entry : duplicates.entrySet()) {
+            System.out.println(entry.getKey() + " = " + entry.getValue());
+            if (entry.getValue() > 2) {
+                Collections.reverse(list);
+                break;
+            }
+        }
+
+        Set<Employee> employees = new LinkedHashSet<>(list);
+        return new ArrayList<>(employees);
     }
 
 }
