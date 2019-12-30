@@ -9,48 +9,35 @@ public class Merge {
     public static List<Employee> merge(List<Employee> firstList, List<Employee> secondList) {
         firstList.retainAll(secondList);
 
-        secondList.addAll(firstList);
-        List<Employee> listFormation = listFormation(secondList);
+        Set<Employee> setEmployee = new LinkedHashSet<>(secondList);
+        setEmployee.addAll(firstList);
 
         secondList.clear();
-        secondList.addAll(listFormation);
+        secondList.addAll(setEmployee);
 
-        ListIterator<Employee> firstListIter = firstList.listIterator();
-        for (Employee nextSL : secondList) {
-            while (firstListIter.hasNext()) {
-                Employee nextFL = firstListIter.next();
-                if (nextSL.equals(nextFL)) {
-                    firstListIter.set(nextSL);
-                } else {
-                    firstListIter.add(nextSL);
+        if (firstList.isEmpty()) {
+            firstList.addAll(secondList);
+        } else {
+            ListIterator<Employee> firstListIter = firstList.listIterator();
+            for (Employee employee : secondList) {
+                while (firstListIter.hasNext()) {
+                    Employee next = firstListIter.next();
+                    if (!firstList.contains(employee)) {
+                        firstListIter.add(employee);
+                    } else {
+                        if (next.equals(employee)) {
+                            next.setMonthTime(employee.getMonthTime());
+                            next.setHourRate(employee.getHourRate());
+                            next.setWorkTime(employee.getWorkTime());
+                        }
+                    }
                 }
+                firstListIter = firstList.listIterator();
             }
-            firstListIter = firstList.listIterator();
+            Collections.reverse(firstList);
         }
 
-        return firstList; // На данный момент [A] == [B]
-    }
-
-    private static List<Employee> listFormation(List<Employee> list) {
-        Map<Employee, Integer> duplicates = new HashMap<>();
-        for (Employee emp : list) {
-            if (duplicates.containsKey(emp)) {
-                duplicates.put(emp, duplicates.get(emp) + 1);
-            } else {
-                duplicates.put(emp, 1);
-            }
-        }
-
-        for (Map.Entry<Employee, Integer> entry : duplicates.entrySet()) {
-            System.out.println(entry.getKey() + " = " + entry.getValue());
-            if (entry.getValue() > 2) {
-                Collections.reverse(list);
-                break;
-            }
-        }
-
-        Set<Employee> employees = new LinkedHashSet<>(list);
-        return new ArrayList<>(employees);
+        return firstList;
     }
 
 }

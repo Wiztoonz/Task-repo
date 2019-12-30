@@ -7,6 +7,7 @@ public abstract class Employee {
     protected final int PERCENT = 100;
 
     private int id;
+    private String specialty;
     private double monthTime;
     private double hourRate;
     private double workTime;
@@ -27,6 +28,14 @@ public abstract class Employee {
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    public String getSpecialty() {
+        return specialty;
+    }
+
+    public void setSpecialty(String specialty) {
+        this.specialty = specialty;
     }
 
     public double getMonthTime() {
@@ -53,27 +62,29 @@ public abstract class Employee {
         this.workTime = workTime;
     }
 
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (!(o instanceof Employee)) return false;
         Employee employee = (Employee) o;
-        return id == employee.id;
+        return id == employee.id &&
+                specialty.equals(employee.specialty);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id);
+        return Objects.hash(id, specialty);
     }
 
     @Override
     public String toString() {
         return "Employee{" +
                 "id=" + id +
+                ", specialty='" + specialty + '\'' +
                 ", monthTime=" + monthTime +
                 ", hourRate=" + hourRate +
                 ", workTime=" + workTime +
                 '}';
     }
-
 }
