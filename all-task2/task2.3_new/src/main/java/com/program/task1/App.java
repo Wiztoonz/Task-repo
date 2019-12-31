@@ -15,6 +15,7 @@ public class App {
 
         Employee p1 = new Programmer();
         p1.setId(1);
+        p1.setSpecialty("programmer");
         p1.setHourRate(10);
         p1.setWorkTime(168);
         p1.setMonthTime(168);
@@ -22,6 +23,7 @@ public class App {
 
         Employee p2 = new Programmer();
         p2.setId(2);
+        p2.setSpecialty("programmer");
         p2.setHourRate(10);
         p2.setWorkTime(173);
         p2.setMonthTime(168);
@@ -29,6 +31,7 @@ public class App {
 
         Employee p3 = new Programmer();
         p3.setId(3);
+        p3.setSpecialty("programmer");
         p3.setHourRate(10);
         p3.setWorkTime(150);
         p3.setMonthTime(180);
@@ -38,6 +41,7 @@ public class App {
 
         Employee m1 = new Manager();
         m1.setId(2);
+        m1.setSpecialty("manager");
         m1.setHourRate(10);
         m1.setWorkTime(168);
         m1.setMonthTime(168);
@@ -45,6 +49,7 @@ public class App {
 
         Employee m2 = new Manager();
         m2.setId(3);
+        m2.setSpecialty("manager");
         m2.setHourRate(10);
         m2.setWorkTime(180);
         m2.setMonthTime(168);
@@ -52,6 +57,7 @@ public class App {
 
         Employee m3 = new Manager();
         m3.setId(4);
+        m3.setSpecialty("manager");
         m3.setHourRate(157);
         m3.setWorkTime(60);
         m3.setMonthTime(70);
@@ -59,12 +65,14 @@ public class App {
 
         Employee m4 = new Manager();
         m4.setId(5);
+        m4.setSpecialty("manager");
         m4.setHourRate(157);
         m4.setWorkTime(60);
         m4.setMonthTime(70);
 
         Employee m5 = new Manager();
         m5.setId(6);
+        m5.setSpecialty("manager");
         m5.setHourRate(157);
         m5.setWorkTime(60);
         m5.setMonthTime(70);

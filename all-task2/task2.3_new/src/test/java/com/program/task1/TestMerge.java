@@ -76,10 +76,8 @@ public class TestMerge {
         System.out.println(needList + " n");
 
         boolean result = false;
-        for (Employee employee : needList) {
-            for (Employee value : merge) {
-                result = employee.equals(value);
-            }
+        for (Employee employee : merge) {
+            result = needList.contains(employee);
         }
 
         if (merge.size() != needList.size()) {
@@ -142,10 +140,8 @@ public class TestMerge {
         System.out.println(needList + " n");
 
         boolean result = false;
-        for (Employee employee : needList) {
-            for (Employee value : merge) {
-                result = employee.equals(value);
-            }
+        for (Employee employee : merge) {
+            result = needList.contains(employee);
         }
 
         if (merge.size() != needList.size()) {
@@ -210,10 +206,8 @@ public class TestMerge {
         System.out.println(needList + " n");
 
         boolean result = false;
-        for (Employee employee : needList) {
-            for (Employee value : merge) {
-                result = employee.equals(value);
-            }
+        for (Employee employee : merge) {
+            result = needList.contains(employee);
         }
 
         if (merge.size() != needList.size()) {

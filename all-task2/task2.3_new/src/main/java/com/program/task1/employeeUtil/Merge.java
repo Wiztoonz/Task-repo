@@ -2,7 +2,10 @@ package com.program.task1.employeeUtil;
 
 import com.program.task1.model.Employee;
 
-import java.util.*;
+import java.util.LinkedHashSet;
+import java.util.List;
+import java.util.ListIterator;
+import java.util.Set;
 
 public class Merge {
 
@@ -34,7 +37,6 @@ public class Merge {
                 }
                 firstListIter = firstList.listIterator();
             }
-            Collections.reverse(firstList);
         }
 
         return firstList;
